@@ -7,11 +7,28 @@
 #include "Sprite.h"
 #include "ViewProjection.h"
 #include "WorldTransform.h"
+#include "DebugCamera.h"
 
 /// <summary>
 /// ゲームシーン
 /// </summary>
 class GameScene {
+
+private:
+	// テクスチャハンドル
+	uint32_t textureHandle_ = 0;
+	// スプライト
+	Sprite* sprite_ = nullptr;
+	// ワールドトランスフォーム
+	WorldTransform worldTransform_;
+	//ビュープロジェクション
+	ViewProjection viewProjection_;
+	//3Dモデル
+	Model* model_ = nullptr;
+	//デバッグカメラ
+	DebugCamera* debugCamera_ = nullptr;
+	
+
 
 public: // メンバ関数
 	/// <summary>
